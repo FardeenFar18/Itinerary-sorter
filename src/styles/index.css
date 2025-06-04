@@ -1,0 +1,130 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 50px 20px;
+  min-height: 100vh;
+  color: #1c1e21;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.app-container {
+  max-width: 900px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 40px;
+  box-shadow:
+    0 6px 20px rgba(24, 119, 242, 0.1);
+  border: 1.5px solid #dce3f0;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: 48px;
+  color: #1877F2;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 5px rgba(24, 119, 242, 0.2);
+}
+
+.days-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+@media (min-width: 768px) {
+  .days-container {
+    flex-direction: row;
+  }
+}
+
+.day-column {
+  background-color: #e7f0fd;
+  border-radius: 14px;
+  padding: 28px 24px;
+  flex: 1;
+  min-width: 280px;
+  box-shadow:
+    0 4px 10px rgba(24, 119, 242, 0.1);
+  color: #1c1e21;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.day-column:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 12px 24px rgba(24, 119, 242, 0.3);
+}
+
+.day-title {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #1877F2;
+  text-transform: capitalize;
+  letter-spacing: 1.2px;
+}
+
+.activity-card {
+  background-color: #ffffff;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(24, 119, 242, 0.5);
+  cursor: grab;
+  user-select: none;
+  font-weight: 600;
+  color: #3a3b3c;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.15s ease;
+}
+
+.activity-card:hover {
+  background-color: #1877F2;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(24, 119, 242, 0.4);
+  transform: scale(1.04);
+}
+
+.activity-card:active {
+  cursor: grabbing;
+  background-color: #155ab6;
+  box-shadow: 0 12px 28px rgba(21, 90, 182, 0.6);
+  transform: scale(1);
+}
+
+
+.activity-card:hover::before {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px #ffffff;
+}
+
+.activity-item {
+  color: #1877F2; /* Facebook blue */
+  font-size: 16px;
+  padding: 6px 0;
+}
+
+
+.activity-item::before {
+  content: "🌟"; /* fallback icon */
+  margin-right: 8px;
+}
