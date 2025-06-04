@@ -118,13 +118,13 @@ h1 {
 }
 
 .activity-item {
-  color: #1877F2; /* Facebook blue */
+  color: #1877F2; 
   font-size: 16px;
   padding: 6px 0;
 }
 
 
 .activity-item::before {
-  content: "🌟"; /* fallback icon */
+  content: "🌟";
   margin-right: 8px;
 }
